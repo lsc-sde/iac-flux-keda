@@ -11,6 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: keda
+        namespace: keda
   interval: 5m0s
   install:
     remediation:
