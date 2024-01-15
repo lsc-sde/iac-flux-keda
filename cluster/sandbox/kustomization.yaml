@@ -6,3 +6,4 @@ resources:
   - secret-job.yaml
   - auth.yaml
   - gitrunner.yaml
+  - gitrunner-deployment.yaml
