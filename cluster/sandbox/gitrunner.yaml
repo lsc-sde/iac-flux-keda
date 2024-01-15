@@ -1,0 +1,19 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: github-runners
+spec:
+  scaleTargetRef:
+    name: gitrunner-deployment
+  minReplicaCount: 1
+  maxReplicaCount: 5
+  triggers:
+  - type: github-runner
+    metadata:
+      githubAPIURL: "https://api.github.com"
+      owner: "lsc-sde"
+      runnerScope: "org"
+      labels: "sandbox"
+      targetWorkflowQueueLength: "1"
+    authenticationRef:
+     name: github-trigger-auth
