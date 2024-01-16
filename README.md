@@ -8,7 +8,7 @@ To test the changes, ensure that you are on your developer machine and that the 
 kubectl config use-context docker-desktop
 kubectl create namespace keda
 flux create source git keda --url="https://github.com/lsc-sde/iac-flux-keda" --branch=main --namespace=keda
-flux create kustomization keda-cluster-config --source="GitRepository/keda" --namespace=keda --path="./clusters/local" --interval=1m --prune=true --health-check-timeout=10m --wait=false
+flux create kustomization keda-cluster-config --source="GitRepository/keda" --namespace=keda --path="./cluster/local" --interval=1m --prune=true --health-check-timeout=10m --wait=false
 flux create kustomization keda-sources --source="GitRepository/keda" --namespace=keda --path="./sources" --interval=1m --prune=true --health-check-timeout=10m --wait=false
 ```
 
