@@ -5,7 +5,7 @@ metadata:
 spec:
   scaleTargetRef:
     name: git-runner
-  minReplicaCount: 1
+  minReplicaCount: 0
   maxReplicaCount: 5
   triggers:
   - type: github-runner
