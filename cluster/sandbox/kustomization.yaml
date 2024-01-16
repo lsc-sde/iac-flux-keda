@@ -4,6 +4,3 @@ namespace: keda
 resources:
   - secret.yaml
   - secret-job.yaml
-  - auth.yaml
-  - gitrunner.yaml
-  - gitrunner-deployment.yaml
