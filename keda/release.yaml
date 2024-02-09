@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: keda
   namespace: keda
+  annotations:
+    xlscsde.nhs.uk/flux-branch: ${keda_branch}
 spec:
   targetNamespace: keda
   releaseName: keda
