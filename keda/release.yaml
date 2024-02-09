@@ -18,3 +18,10 @@ spec:
   install:
     remediation:
       retries: -1
+    disableWait: true
+    disableWaitForJobs: true
+  upgrade:
+    remediation:
+      retries: -1
+    disableWait: true
+    disableWaitForJobs: true
