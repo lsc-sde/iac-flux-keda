@@ -9,6 +9,7 @@ spec:
   chart:
     spec:
       chart: keda
+      version: ${keda_chart_version}
       sourceRef:
         kind: HelmRepository
         name: keda
@@ -16,4 +17,4 @@ spec:
   interval: 5m0s
   install:
     remediation:
-      retries: 10
+      retries: -1
