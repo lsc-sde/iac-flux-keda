@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - keda
   - secret.yaml
-  - secret-job.yaml
