@@ -49,3 +49,21 @@ spec:
     matchLabels: {}
   policyTypes:
   - Egress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: egress-default-https
+spec:
+  egress:
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: default
+      ports:
+      - protocol: TCP
+        port: 443
+  podSelector: 
+    matchLabels: {}
+  policyTypes:
+  - Egress
